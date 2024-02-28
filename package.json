@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "fix": "eslint --fix ."
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -15,7 +16,8 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "gsap": "^3.12.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.6.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",

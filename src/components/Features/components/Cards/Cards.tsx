@@ -1,4 +1,4 @@
-import { cardsItems } from "../../utils/cardsItems";
+import { cardsItems } from '../../utils/cardsItems';
 
 export const Cards = () => {
   return (

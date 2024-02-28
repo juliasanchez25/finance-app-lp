@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import { gsap } from "gsap";
-import { Header } from "../Header/Header";
-import { Content } from "./components/Content/Content";
+import { gsap } from 'gsap';
+import { Header } from '../Header/Header';
+import { Content } from './components/Content/Content';
 import manFinances from '../../../public/assets/images/man-finances-computer-2.svg';
 
 export const Banner = () => {
