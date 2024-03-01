@@ -22,13 +22,13 @@ export const cardsItems = [
   {
     id: 3,
     title: 'Gerenciamento de Despesas',
-    description: 'Registre e categorize suas despesas automaticamente.',
+    description: 'Registre e categorize suas despesas automaticamente. Analise seus gastos de forma eficiente.',
     icon: <><FontAwesomeIcon icon={faScaleBalanced} size='xl' /></>
   },
   {
     id: 4,
     title: 'Alertas de Gastos',
-    description: 'Receba notificações instantâneas quando estiver se aproximando de seus limites de gastos em categorias específicas',
+    description: 'Receba notificações  quando estiver se aproximando de seus limites de gastos em categorias específicas',
     icon: <><FontAwesomeIcon icon={faBell} size='xl' /></>
   },
   {

@@ -32,7 +32,7 @@ export const Banner = () => {
       <Header />
       <div className='flex items-center justify-between flex-col lg:flex-row-reverse'>
         <img
-          className='md:w-1/2 banner-image'
+          className='md:w-1/2 h-auto banner-image'
           src={manFinances}
           alt="Man managing his finances"
         />

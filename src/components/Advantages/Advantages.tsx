@@ -10,7 +10,7 @@ export const Advantages = () => {
     gsap.utils.toArray('.advantage').forEach((advantage, index) => {
       gsap.to(advantage as HTMLElement, {
         opacity: 1,
-        duration: 1,
+        duration: 1.3,
         delay: index * 0.3,
         scrollTrigger: {
           trigger: advantage as HTMLElement,
@@ -22,10 +22,10 @@ export const Advantages = () => {
   })
 
   return (
-    <section className='py-16 px-8 flex flex-col items-center justify-around xl:flex-row xl:p-32 lg:ml-20'>
+    <section className='container mx-auto py-16 flex flex-col items-center justify-around xl:flex-row lg:py-32 lg:gap-12 lg:px-8'>
       <div className='text-center lg:mb-16 xl:text-left'>
-        <h2 className='mb-4 font-bold text-4xl lg:text-5xl'>Vantagens</h2>
-        <p className='text-stone-600 font-normal max-w-sm text-xl lg:text-2xl'>
+        <h2 className='mb-10 font-bold text-4xl md:text-[4vw]'>Vantagens</h2>
+        <p className='text-stone-600 font-normal max-w-md text-xl xl:text-2xl 2xl:text-3xl'>
           Nós ouvimos nossos usuários e trabalhamos juntos para evoluir cada vez mais nossa plataforma.
         </p>
       </div>

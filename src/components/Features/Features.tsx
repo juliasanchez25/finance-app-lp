@@ -1,46 +1,58 @@
-import { Cards } from './components/Cards/Cards';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css/pagination';
+import 'swiper/css';
+import { Card } from './components/Card/Card';
+import { useScreenSize } from '../../hooks/useScreenSize';
+import { cardsItems } from './utils/cardsItems';
+import { Title } from './components/Title/Title';
 
 export const Features = () => {
-  // const textRef = useRef<HTMLDivElement>(null);
-
-
-  // useEffect(() => {
-  //   const textElement = textRef.current!;
-  //   const letters = textElement.querySelectorAll<HTMLSpanElement>('span');
-
-  //   const tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: textElement,
-  //       start: 'top 80%',
-  //       end: 'bottom 20%',
-  //       scrub: true
-  //     }
-  //   });
-
-  //   letters.forEach((letter: HTMLSpanElement, index: number) => {
-  //     tl.fromTo(letter,
-  //       {
-  //         opacity: 0,
-  //         y: 'random(-100, 100)',
-  //         x: 'random(-100, 100)'
-  //       },
-  //       {
-  //         opacity: 1,
-  //         y: 0,
-  //         x: 0,
-  //         duration: 1,
-  //         ease: 'back.out(1.0)',
-  //         stagger: 0.1
-  //       }, index * 0.05);
-  //   });
-  // }, []);
+  const { isMobile, isDesktop } = useScreenSize();
 
   return (
-    <section className="p-8 flex flex-col items-center justify-center bg-black">
-      <h2 className="my-16 max-w-4xl text-center text-white font-bold text-4xl leading-10 lg:my-24 lg:text-7xl ">
-        Conheça nossas funcionalidades
-      </h2>
-      <Cards />
-    </section>
+    <>
+      {isDesktop && (
+        <section className="p-8 flex flex-col items-center justify-center bg-black">
+          <Title />
+          <div className="mb-24 grid grid-cols-1 md:grid-cols-3 gap-12">
+            {cardsItems.map((item, index) => (
+              <Card
+                item={item}
+                index={index}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+      {isMobile && (
+        <section className='py-16 bg-black'>
+          <Title />
+          <Swiper
+            slidesPerView={1}
+            centeredSlides
+            className='bg-black mt-12 pb-16'
+            modules={[Pagination]}
+            pagination={{ clickable: true }}
+            style={{
+              '--swiper-pagination-color': '#FFFFFF',
+              '--swiper-pagination-bullet-inactive-color': '#999999',
+              '--swiper-pagination-bullet-inactive-opacity': '1',
+            }}
+          >
+            {cardsItems.map((item, index) => (
+              <SwiperSlide>
+                <div className='flex justify-center items-center'>
+                  <Card
+                    item={item}
+                    index={index}
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </section>
+      )}
+    </>
   );
 }
