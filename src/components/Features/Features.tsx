@@ -1,3 +1,4 @@
+import { CSSProperties } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
@@ -38,7 +39,7 @@ export const Features = () => {
               '--swiper-pagination-color': '#FFFFFF',
               '--swiper-pagination-bullet-inactive-color': '#999999',
               '--swiper-pagination-bullet-inactive-opacity': '1',
-            }}
+            } as CSSProperties}
           >
             {cardsItems.map((item, index) => (
               <SwiperSlide>
