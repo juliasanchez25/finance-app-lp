@@ -10,7 +10,7 @@ export const Advantages = () => {
     gsap.utils.toArray('.advantage').forEach((advantage, index) => {
       gsap.to(advantage as HTMLElement, {
         opacity: 1,
-        duration: 1.3,
+        duration: 1.8,
         delay: index * 0.3,
         scrollTrigger: {
           trigger: advantage as HTMLElement,
